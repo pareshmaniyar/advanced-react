@@ -23,15 +23,19 @@
   "homepage": "https://github.com/pareshmaniyar/advanced-react#readme",
   "dependencies": {
     "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react-dom": "^16.13.1",
+    "react-router-dom": "^5.2.0"
   },
   "devDependencies": {
     "@babel/core": "^7.9.6",
     "@babel/preset-env": "^7.9.6",
     "@babel/preset-react": "^7.9.4",
     "babel-loader": "^8.1.0",
+    "css-loader": "^3.5.3",
     "html-webpack-plugin": "^4.3.0",
+    "mini-css-extract-plugin": "^0.9.0",
     "sass-loader": "^8.0.2",
+    "style-loader": "^1.2.1",
     "terser-webpack-plugin": "^3.0.1",
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.11",

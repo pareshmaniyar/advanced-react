@@ -1,23 +1,34 @@
 import React from 'react';
 import LifeCycle from './pages/lifecycle'
+import {
+    Switch,
+    Route,
+    HashRouter as Router,
+    Link
+} from 'react-router-dom';
+import Routes from './pages/routes'
 
 class App extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {
-            showLifecycle: true
-        }
-        this.updateState = this.updateState.bind(this);
-    }
-    updateState(){
-        this.setState(state => ({showLifecycle: !state.showLifecycle}))
+        this.state = {};
     }
     render(){
         return (
             <div>
                 <h1>My first Demo App!</h1>
-                <button onClick={this.updateState}>Toggle LifeCycle</button>
-                {this.state.showLifecycle? <LifeCycle randomProp="Prop received from App "/>:null}
+                <Router>
+                    <Link to="/lifecycle">LifeCycle</Link>
+                    <Link to="/routes">Routes</Link>
+                    <Switch>
+                        <Route path="/lifecycle">
+                            <LifeCycle randomProp="Prop received from App "/>
+                        </Route>
+                        <Route path="/routes">
+                            <Routes/>
+                        </Route>
+                    </Switch>
+                </Router>
             </div>
         );
     }
