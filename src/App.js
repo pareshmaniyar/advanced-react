@@ -1,12 +1,12 @@
-import React from 'react';
-import LifeCycle from './pages/lifecycle'
+import React, { Suspense, lazy } from 'react';
 import {
     Switch,
     Route,
     HashRouter as Router,
     Link
 } from 'react-router-dom';
-import Routes from './pages/routes'
+const LifeCycle = lazy(() => import('./pages/lifecycle'));
+const Routes = lazy(() => import('./pages/routes'));
 
 class App extends React.Component {
     constructor(props) {
@@ -20,14 +20,16 @@ class App extends React.Component {
                 <Router>
                     <Link to="/lifecycle">LifeCycle</Link>
                     <Link to="/routes">Routes</Link>
-                    <Switch>
-                        <Route path="/lifecycle">
-                            <LifeCycle randomProp="Prop received from App "/>
-                        </Route>
-                        <Route path="/routes">
-                            <Routes/>
-                        </Route>
-                    </Switch>
+                    <Suspense fallback={<div>Loading...</div>}>
+                        <Switch>
+                            <Route path="/lifecycle">
+                                <LifeCycle randomProp="Prop received from App "/>
+                            </Route>
+                            <Route path="/routes">
+                                <Routes/>
+                            </Route>
+                        </Switch>
+                    </Suspense>
                 </Router>
             </div>
         );
