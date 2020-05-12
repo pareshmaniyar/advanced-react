@@ -8,6 +8,8 @@ import {
 const LifeCycle = lazy(() => import('./pages/lifecycle'));
 const Routes = lazy(() => import('./pages/routes'));
 const PropType = lazy(() => import('./pages/proptype'));
+const Fragments = lazy(() => import('./pages/fragments'));
+const ErrorBoundaries = lazy(() => import('./pages/errorBoundaries'));
 
 class App extends React.Component {
     constructor(props) {
@@ -22,6 +24,8 @@ class App extends React.Component {
                     <Link to="/lifecycle">LifeCycle</Link>
                     <Link to="/routes">Routes</Link>
                     <Link to="/proptype">Prop Type</Link>
+                    <Link to="/fragments">Fragments</Link>
+                    <Link to="/errorboundaries">Error Boundaries</Link>
                     <Suspense fallback={<div>Loading...</div>}>
                         <Switch>
                             <Route path="/lifecycle">
@@ -32,6 +36,12 @@ class App extends React.Component {
                             </Route>
                             <Route path="/proptype">
                                 <PropType/>
+                            </Route>
+                            <Route path="/fragments">
+                                <Fragments/>
+                            </Route>
+                            <Route path="/errorboundaries">
+                                <ErrorBoundaries/>
                             </Route>
                         </Switch>
                     </Suspense>
