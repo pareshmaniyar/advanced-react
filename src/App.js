@@ -7,6 +7,7 @@ import {
 } from 'react-router-dom';
 const LifeCycle = lazy(() => import('./pages/lifecycle'));
 const Routes = lazy(() => import('./pages/routes'));
+const PropType = lazy(() => import('./pages/proptype'));
 
 class App extends React.Component {
     constructor(props) {
@@ -20,6 +21,7 @@ class App extends React.Component {
                 <Router>
                     <Link to="/lifecycle">LifeCycle</Link>
                     <Link to="/routes">Routes</Link>
+                    <Link to="/proptype">Prop Type</Link>
                     <Suspense fallback={<div>Loading...</div>}>
                         <Switch>
                             <Route path="/lifecycle">
@@ -27,6 +29,9 @@ class App extends React.Component {
                             </Route>
                             <Route path="/routes">
                                 <Routes/>
+                            </Route>
+                            <Route path="/proptype">
+                                <PropType/>
                             </Route>
                         </Switch>
                     </Suspense>

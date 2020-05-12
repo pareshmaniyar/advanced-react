@@ -18,10 +18,10 @@
 
 - [x] Webpack Setup
 - [x] Life-cycle
-- [ ] Router
+- [x] Router
 - [ ] Prop type
 
-- [ ] Lazy loading
+- [x] Lazy loading
 - [ ] Context
 - [ ] Lodash
 - [ ] Error Boundaries
