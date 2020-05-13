@@ -10,6 +10,7 @@ const Routes = lazy(() => import('./pages/routes'));
 const PropType = lazy(() => import('./pages/proptype'));
 const Fragments = lazy(() => import('./pages/fragments'));
 const ErrorBoundaries = lazy(() => import('./pages/errorBoundaries'));
+const ReduxToDoList = lazy(() => import('./pages/redux-todo-list'));
 
 class App extends React.Component {
     constructor(props) {
@@ -26,6 +27,7 @@ class App extends React.Component {
                     <Link to="/proptype">Prop Type</Link>
                     <Link to="/fragments">Fragments</Link>
                     <Link to="/errorboundaries">Error Boundaries</Link>
+                    <Link to="/redux-todo-list">Redux Todo List</Link>
                     <Suspense fallback={<div>Loading...</div>}>
                         <Switch>
                             <Route path="/lifecycle">
@@ -42,6 +44,9 @@ class App extends React.Component {
                             </Route>
                             <Route path="/errorboundaries">
                                 <ErrorBoundaries/>
+                            </Route>
+                            <Route path="/redux-todo-list">
+                                <ReduxToDoList/>
                             </Route>
                         </Switch>
                     </Suspense>
