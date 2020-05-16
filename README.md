@@ -1,7 +1,7 @@
 # Advanced React Concepts
 
 ## Redux
-- [ ] Basic
+- [x] Basic
 - [ ] Middeware
 - [ ] Reselect
 - [ ] Immutable

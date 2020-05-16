@@ -4,7 +4,7 @@ class LifeCycle extends React.Component {
     constructor(props){
         super(props);
         this.state = {
-            state: "Initial State",
+            state: "Initial State  ",
             currentTime: new Date().getTime(),
             stages: [
                 {
@@ -19,6 +19,7 @@ class LifeCycle extends React.Component {
         }
         console.log("Constructor");
         this.updateState = this.updateState.bind(this);
+        this.computed = this.computed.bind(this);
     }
     componentDidMount(){
         console.log("componentDidMount");
@@ -51,6 +52,9 @@ class LifeCycle extends React.Component {
         console.log("getSnapshotBeforeUpdate");
         return null;
     }
+    computed(){
+        return this.state.state
+    }
     render(){
         console.log("Render");
         return (
@@ -65,6 +69,7 @@ class LifeCycle extends React.Component {
                 <button onClick={() => this.updateState("Updated State")}>Update State</button>
                 <div>{this.props.randomProp}</div>
                 <button onClick={() => this.updateState("Dummy State")}>Trying to Update State to Dummy value</button><br/>
+                <h4>computed: {this.computed()}</h4>
             </div>
         );
     }
