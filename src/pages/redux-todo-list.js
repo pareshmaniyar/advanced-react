@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { switchOff, switchOn } from '../actions/index';
+import ContainerComponents from '../containers/containerComponents'
 
 class ToDoList extends React.Component {
     constructor(props){
@@ -23,6 +24,7 @@ class ToDoList extends React.Component {
                 <button onClick={() => this.props.switchOff(this.state.text)}>Switch Off</button>
                 <h4>List:</h4>
                 {this.props.list.map(text => <div>{text}</div>)}
+                <ContainerComponents title="Practicing Redux"/>
             </div>
         );
     }
@@ -38,4 +40,4 @@ const mapDispatchToProps = (dispatch) => ({
     switchOn: text => dispatch(switchOn(text))
 })
 
-export default connect(mapStateToProps, mapDispatchToProps)(ToDoList);
+export default connect(mapStateToProps, { switchOff, switchOn })(ToDoList);

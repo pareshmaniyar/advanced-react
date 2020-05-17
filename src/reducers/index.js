@@ -1,6 +1,7 @@
 let initialState = {
     switch: 'ON',
-    list: []
+    list: [],
+    name: "Name"
 }
 function reducer(state = initialState, action) {
     switch(action.type){
@@ -8,6 +9,8 @@ function reducer(state = initialState, action) {
             return {switch: 'ON', list: [...state.list, action.text]};
         case 'OFF':
             return {switch: 'OFF', list: [...state.list, action.text]};
+        case 'CHANGE_NAME':
+            return {...state, name: action.name}
         default:
             return state;
     }

@@ -12,3 +12,8 @@ export const switchOff = text => ({
     type: 'OFF',
     text
 })
+
+export const changeName = name => ({
+    type: 'CHANGE_NAME',
+    name
+})
