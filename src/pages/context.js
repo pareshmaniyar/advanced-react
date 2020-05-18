@@ -1,17 +1,8 @@
 import React from 'react';
-import ComponentC from "../components/componentC";
 export const UserContext = React.createContext();
+export const ChannelContext = React.createContext();
+import ComponentB from "../components/ComponentB";
 
-class ComponentB extends React.Component {
-    render(){
-        return (
-            <div>
-                ComponentB
-                <ComponentC />
-            </div>
-        );
-    }
-}
 class ComponentA extends React.Component {
     render(){
         return (
@@ -30,7 +21,9 @@ class Parent extends React.Component {
     render(){
         return (
             <UserContext.Provider value={obj}>
-                <ComponentA />
+                <ChannelContext.Provider value={'Channel'}>
+                    <ComponentA />
+                </ChannelContext.Provider>
             </UserContext.Provider>
         );
     }
