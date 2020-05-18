@@ -1,7 +1,17 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useReducer } from 'react';
 
+const initialState = 0;
+function reducer(state,action){
+    switch(action) {
+        case 'i': return state + 1;
+        case 'd': return state - 1;
+        case 'r': return initialState;
+        default: return state;
+    }
+}
 export default function Title() {
     const [title, setTitle] = useState("Initial Title");
+    const [count, dispatch] = useReducer(reducer, initialState);
     function clickHandler(event) {
         if(event.key == "Enter" && event.target.value != "") {
             setTitle(event.target.value);
@@ -31,6 +41,11 @@ export default function Title() {
             <h3>{title}</h3>
             <input placeholder="Set Title" onKeyDown={clickHandler} type="text"></input>
             <input placeholder="Append Title" onKeyDown={appendTitle} type="text"></input>
+            <hr/>
+            <div>Count: {count}</div>
+            <button onClick={() => dispatch('i')}>Increment</button>
+            <button onClick={() => dispatch('d')}>Decrement</button>
+            <button onClick={() => dispatch('r')}>Reset</button>
         </div>
     );
 }
