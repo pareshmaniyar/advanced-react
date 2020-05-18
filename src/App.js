@@ -12,6 +12,7 @@ const Fragments = lazy(() => import('./pages/fragments'));
 const ErrorBoundaries = lazy(() => import('./pages/errorBoundaries'));
 const ReduxToDoList = lazy(() => import('./pages/redux-todo-list'));
 const Hooks = lazy(() => import('./pages/hooks'));
+const Context = lazy(() => import('./pages/context'));
 
 class App extends React.Component {
     constructor(props) {
@@ -30,6 +31,7 @@ class App extends React.Component {
                     <Link to="/errorboundaries">Error Boundaries</Link>
                     <Link to="/redux-todo-list">Redux Todo List</Link>
                     <Link to="/hooks">Hooks</Link>
+                    <Link to="/context">Context</Link>
                     <Suspense fallback={<div>Loading...</div>}>
                         <Switch>
                             <Route path="/lifecycle">
@@ -52,6 +54,9 @@ class App extends React.Component {
                             </Route>
                             <Route path="/hooks">
                                 <Hooks/>
+                            </Route>
+                            <Route path="/context">
+                                <Context/>
                             </Route>
                         </Switch>
                     </Suspense>
