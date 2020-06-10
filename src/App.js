@@ -13,6 +13,7 @@ const ErrorBoundaries = lazy(() => import('./pages/errorBoundaries'));
 const ReduxToDoList = lazy(() => import('./pages/redux-todo-list'));
 const Hooks = lazy(() => import('./pages/hooks'));
 const Context = lazy(() => import('./pages/context'));
+const WebSocket = lazy(() => import('./pages/websocket'));
 
 class App extends React.Component {
     constructor(props) {
@@ -32,6 +33,7 @@ class App extends React.Component {
                     <Link to="/redux-todo-list">Redux Todo List</Link>
                     <Link to="/hooks">Hooks</Link>
                     <Link to="/context">Context</Link>
+                    <Link to="/websocket">Web socket</Link>
                     <Suspense fallback={<div>Loading...</div>}>
                         <Switch>
                             <Route path="/lifecycle">
@@ -57,6 +59,9 @@ class App extends React.Component {
                             </Route>
                             <Route path="/context">
                                 <Context/>
+                            </Route>
+                            <Route path="/websocket">
+                                <WebSocket/>
                             </Route>
                         </Switch>
                     </Suspense>

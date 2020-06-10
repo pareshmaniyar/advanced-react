@@ -11,7 +11,7 @@
 
 ## Hooks
 
-- [ ] Basic
+- [x] Basic
 - [ ] Advanced Planning
 
 ## Topics
@@ -38,3 +38,4 @@
 - [ ] Optimization planning
 - [ ] Integrate GraphQL
 - [ ] Authentication
+- [x] Web socket - socket.io
