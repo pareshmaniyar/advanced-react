@@ -1,2 +1,4 @@
 node_modules
 dist
+dist-admin
+package-lock.json

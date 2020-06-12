@@ -1,11 +1,19 @@
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 const TerserPlugin = require('terser-webpack-plugin');
+console.log("process.argv", process.argv);
+var entry = './src/index.js';
+var output = path.join(__dirname, '/dist');
+if(process.argv[4] == "--admin") {
+    entry = path.resolve(__dirname, 'src/index-admin.js');
+    output = path.join(__dirname, '/dist-admin');
+    console.log(entry);
+}
 
 module.exports = {
-    entry: './src/index.js',
+    entry: entry,
     output: {
-        path: path.join(__dirname, '/dist'),
+        path: output,
         filename: '[name].[hash].js'
     },
     optimization: {

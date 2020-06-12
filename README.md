@@ -12,21 +12,22 @@
 ## Hooks
 
 - [x] Basic
-- [ ] Advanced Planning
+- [x] useState, useEffect, useReducer, useContext, useHistory
 
 ## Topics
 
-- [x] Webpack Setup
+- [x] Webpack Configuration
+    - [x] Multiple build configurations
 - [x] Life-cycle
 - [x] Router
-- [ ] Prop type
+- [x] Prop type
 
 - [x] Lazy loading
-- [ ] Context
+- [x] Context
 - [ ] Lodash
-- [ ] Error Boundaries
+- [x] Error Boundaries
 
-- [ ] Fragments
+- [x] Fragments
 - [ ] Refs
 - [ ] Strict Mode
 - [ ] History
