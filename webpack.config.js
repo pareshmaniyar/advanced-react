@@ -2,7 +2,10 @@ const HTMLWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 const TerserPlugin = require('terser-webpack-plugin');
 console.log("process.argv", process.argv);
-var entry = './src/index.js';
+var entry = {
+    app: './src/index.js',
+    adminApp: './src/index-admin.js'
+}
 var output = path.join(__dirname, '/dist');
 if(process.argv[4] == "--admin") {
     entry = path.resolve(__dirname, 'src/index-admin.js');
