@@ -2,7 +2,7 @@ import React, { useContext, useRef } from 'react';
 import { UserContext, ChannelContext } from '../pages/context';
 import ComponentC from "./componentD";
 
-export default function Child({ setRef }) {
+function Child({ setRef }) {
     let inputRef = useRef();
     useEffect(() => {
         setRef(inputRef);
@@ -15,7 +15,7 @@ export default function Child({ setRef }) {
     );
 }
 
-export default function Parent() {
+function Parent() {
     let ref = "";
     function onClick(){
         console.log("Parent clicked", ref.target.value);
