@@ -1,19 +1,19 @@
 import React from 'react';
 
-function ReduxPresentation({ list, handleChange, handleRefresh }){
+function ReduxPresentation({ list, handleChange, handleRefresh, selectedSubreddit }){
     
     return (
         <div className="redux-container">
             Redux Container
             <br/>
-            <select onChange={handleChange}>
-                <option value="react">react</option>
+            <select onChange={(e) => handleChange(e.target.value)} value={selectedSubreddit}>
                 <option value="vue">vue</option>
+                <option value="react">react</option>
                 <option value="redux">redux</option>
             </select>
-            <button onClick={handleRefresh}>Refresh</button>
+            <button onClick={() => handleRefresh(selectedSubreddit)}>Refresh</button>
             <ul>
-                {list.map(item => <li>{item}</li>)}
+                {list.map(item => <li key={item.data.id}>{item.data.title}</li>)}
             </ul>
         </div>
     );

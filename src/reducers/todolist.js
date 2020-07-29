@@ -3,7 +3,7 @@ let initialState = {
     list: [],
     name: "Name"
 }
-function reducer(state = initialState, action) {
+function todolist(state = initialState, action) {
     switch(action.type){
         case 'ON':
             return {switch: 'ON', list: [...state.list, action.text]};
@@ -16,4 +16,4 @@ function reducer(state = initialState, action) {
     }
 }
 
-export default reducer
+export default todolist

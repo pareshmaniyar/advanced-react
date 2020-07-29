@@ -31,8 +31,8 @@ class ToDoList extends React.Component {
 }
 const mapStateToProps = (state) => {
     return {
-        switch: state.switch,
-        list: state.list
+        switch: state.todolist.switch,
+        list: state.todolist.list
     }
 }
 const mapDispatchToProps = (dispatch) => ({

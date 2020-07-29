@@ -1,19 +1,8 @@
-let initialState = {
-    switch: 'ON',
-    list: [],
-    name: "Name"
-}
-function reducer(state = initialState, action) {
-    switch(action.type){
-        case 'ON':
-            return {switch: 'ON', list: [...state.list, action.text]};
-        case 'OFF':
-            return {switch: 'OFF', list: [...state.list, action.text]};
-        case 'CHANGE_NAME':
-            return {...state, name: action.name}
-        default:
-            return state;
-    }
-}
+import { combineReducers } from 'redux'
+import todolist from './todolist';
+import subreddit from './subreddit';
 
-export default reducer
+export default combineReducers({
+    subreddit,
+    todolist 
+})
