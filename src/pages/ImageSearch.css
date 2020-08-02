@@ -1,0 +1,33 @@
+.image-search {
+    overflow-anchor: none;
+}
+.image-search section {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 30px;
+}
+
+.image-search img {
+    width: 30%;
+    height: 400px;
+    padding: 5px;
+    margin: 5px;
+    object-fit: contain;
+    /* border: 1px solid #ccc; */
+    border-radius: 10px;
+    background-color: grey;
+    /* max-width: 100%; */
+    /* max-height: 100%; */
+}
+.popup {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90vh;
+    height: 90vh;
+    flex-direction: column;
+}
+.big-image {
+    max-width: 100%;
+    max-height: 100%;
+}

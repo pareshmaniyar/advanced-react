@@ -16,6 +16,7 @@ const ReduxUserList = lazy(() => import('./pages/redux-userlist'));
 const Hooks = lazy(() => import('./pages/hooks'));
 const Context = lazy(() => import('./pages/context'));
 const WebSocket = lazy(() => import('./pages/websocket'));
+const ImageSearch = lazy(() => import('./pages/ImageSearch'));
 
 class App extends React.Component {
     constructor(props) {
@@ -36,6 +37,7 @@ class App extends React.Component {
                     <Link to="/hooks">Hooks</Link>
                     <Link to="/context">Context</Link>
                     <Link to="/websocket">Web socket</Link>
+                    <Link to="/image-search">Image Search</Link>
                     <br/><br/>
                     <Suspense fallback={<div>Loading...</div>}>
                         <Switch>
@@ -68,6 +70,9 @@ class App extends React.Component {
                             </Route>
                             <Route path="/websocket">
                                 <WebSocket/>
+                            </Route>
+                            <Route path="/image-search">
+                                <ImageSearch/>
                             </Route>
                         </Switch>
                     </Suspense>
