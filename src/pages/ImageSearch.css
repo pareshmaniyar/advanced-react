@@ -1,12 +1,46 @@
 .image-search {
     overflow-anchor: none;
 }
+.image-search .search-feild img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #05B8AE;
+    margin-left: -22px;
+}
+.image-search .search-feild {
+    display: flex;
+    padding-left: 35px;
+}
+.image-search .search-feild input {
+    padding: .375rem .75rem;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    box-shadow: none;
+    outline: 0;
+    font-size: 1rem;
+    line-height: 1.5;
+    width: 40%;
+}
 .image-search section {
     display: flex;
     flex-wrap: wrap;
     padding: 30px;
 }
-
+.load-more-container {
+    display: flex;
+    justify-content: center;
+}
+.load-more-button {
+    border-radius: 31px;
+    width: 150px;
+    height: 60px;
+    background-color: #05B8AE;
+    color: #fff;
+    text-align: center;
+    line-height: 60px;
+    cursor: pointer;
+}
 .image-search img {
     width: 30%;
     height: 400px;
@@ -23,11 +57,30 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 90vh;
-    height: 90vh;
+    width: 80vh;
+    height: 80vh;
     flex-direction: column;
 }
 .big-image {
-    max-width: 100%;
-    max-height: 100%;
+    max-width: 75%;
+    max-height: 75%;
+    margin-bottom: 20px;
+}
+.modal-cross-container {
+    display: flex;
+    flex-direction: row-reverse;
+}
+.modal-cross {
+    margin-right: -34px;
+    margin-top: -32px;
+    cursor: pointer;
+    z-index: 112;
+    background-color: #3A3A3A;
+    color: white;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
