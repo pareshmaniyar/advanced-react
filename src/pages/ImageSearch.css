@@ -62,8 +62,8 @@
     flex-direction: column;
 }
 .big-image {
-    max-width: 75%;
-    max-height: 75%;
+    max-width: 85%;
+    max-height: 85%;
     margin-bottom: 20px;
 }
 .modal-cross-container {

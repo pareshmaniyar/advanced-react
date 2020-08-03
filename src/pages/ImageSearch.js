@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useParams, useHistory, useLocation } from 'react-router-dom';
+import { useHistory, useLocation } from 'react-router-dom';
 import axios from 'axios';
 import './ImageSearch.css';
 import ImageRender from '../components/ImageRender';
@@ -17,9 +17,8 @@ function ImageSearch(){
             method: 'get',
             url: 'https://api.unsplash.com/search/photos',
             params: {
-            //   client_id: '4207199fdd3a75e974b6da10050b17abb8eb576fbeb023de2486ea4c1c42313e', //2.hesap 
+              client_id: '4207199fdd3a75e974b6da10050b17abb8eb576fbeb023de2486ea4c1c42313e', //2.hesap 
             //   client_id: 'c6247455a0aefef5dcb6858a1e1e49df53c4260a8b27b1dd27b5be0ffedcf2f6',
-                client_id: 'Hu0H0vwQo-Yej_eAnkcAieWEdpZyaSlO3AuZLdcubtk',
                 query: searchQuery,
                 per_page: 9,
                 page: 1,

@@ -11,8 +11,12 @@ const customStyles = {
         marginRight           : '-50%',
         transform             : 'translate(-50%, -50%)',
         overflow : 'inherit'
+    },
+    overlay: {
+        backgroundColor: '#4C4C4C'
     }
 };
+// Modal.defaultStyles.overlay.backgroundColor = '#4C4C4C';
 Modal.setAppElement('#root')
 import './ImageSearch.css';
 
