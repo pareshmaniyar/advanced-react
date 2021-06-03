@@ -19,6 +19,7 @@ const WebSocket = lazy(() => import('./pages/websocket'));
 const ImageSearch = lazy(() => import('./pages/ImageSearch'));
 const SingleImage = lazy(() => import('./pages/SingleImage'));
 const Refs = lazy(() => import('./pages/Refs'));
+const Memoization = lazy(() => import('./pages/Memoization'));
 
 class App extends React.Component {
     constructor(props) {
@@ -29,18 +30,21 @@ class App extends React.Component {
         return (
             <div className="app-container">
                 <Router>
-                    <Link to="/lifecycle">LifeCycle</Link>
-                    <Link to="/routes">Routes</Link>
-                    <Link to="/proptype">Prop Type</Link>
-                    <Link to="/fragments">Fragments</Link>
-                    <Link to="/errorboundaries">Error Boundaries</Link>
-                    <Link to="/redux-todo-list">Redux Todo List</Link>
-                    <Link to="/redux-userlist">Redux User List</Link>
-                    <Link to="/hooks">Hooks</Link>
-                    <Link to="/context">Context</Link>
-                    <Link to="/websocket">Web socket</Link>
-                    <Link to="/image-search/">Image Search</Link>
-                    <Link to="/refs/">Refs</Link>
+                    <div className="links">
+                        <Link to="/lifecycle">LifeCycle</Link>
+                        <Link to="/routes">Routes</Link>
+                        <Link to="/proptype">Prop Type</Link>
+                        <Link to="/fragments">Fragments</Link>
+                        <Link to="/errorboundaries">Error Boundaries</Link>
+                        <Link to="/redux-todo-list">Redux Todo List</Link>
+                        <Link to="/redux-userlist">Redux User List</Link>
+                        <Link to="/hooks">Hooks</Link>
+                        <Link to="/context">Context</Link>
+                        <Link to="/websocket">Web socket</Link>
+                        <Link to="/image-search/">Image Search</Link>
+                        <Link to="/refs/">Refs</Link>
+                        <Link to="/memoization/">Memoization</Link>
+                    </div>
                     <br/><br/>
                     <Suspense fallback={<div>Loading...</div>}>
                         <Switch>
@@ -82,6 +86,9 @@ class App extends React.Component {
                             </Route>
                             <Route path="/refs">
                                 <Refs />
+                            </Route>
+                            <Route path="/memoization">
+                                <Memoization />
                             </Route>
                         </Switch>
                     </Suspense>
