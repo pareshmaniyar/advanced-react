@@ -1,7 +1,7 @@
 import React from 'react';
 export const UserContext = React.createContext();
 export const ChannelContext = React.createContext();
-import ComponentB from "../components/ComponentB";
+import ComponentB from "../components/componentB";
 
 class ComponentA extends React.Component {
     render(){

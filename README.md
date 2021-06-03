@@ -28,7 +28,7 @@
 - [x] Error Boundaries
 
 - [x] Fragments
-- [ ] Refs
+- [x] Refs, Forward Refs
 - [ ] Strict Mode
 - [ ] History
 
@@ -40,3 +40,7 @@
 - [ ] Integrate GraphQL
 - [ ] Authentication
 - [x] Web socket - socket.io
+- [ ] Styled Components
+
+## Things that have to be changed
+- [ ] All the Components' file name to be captalized, back then when the project started I didn't know
