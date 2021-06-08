@@ -20,6 +20,9 @@ const ImageSearch = lazy(() => import('./pages/ImageSearch'));
 const SingleImage = lazy(() => import('./pages/SingleImage'));
 const Refs = lazy(() => import('./pages/Refs'));
 const Memoization = lazy(() => import('./pages/Memoization'));
+const PersonDetails = lazy(() => import('./pages/PersonDetails'));
+const EmployeeList = lazy(() => import('./pages/EmployeeList'));
+const EmployeeDetails = lazy(() => import('./pages/EmployeeDetails'));
 
 class App extends React.Component {
     constructor(props) {
@@ -44,6 +47,8 @@ class App extends React.Component {
                         <Link to="/image-search/">Image Search</Link>
                         <Link to="/refs/">Refs</Link>
                         <Link to="/memoization/">Memoization</Link>
+                        <Link to="/person-details/">Person Details</Link>
+                        <Link to="/employee-list/">Employee List</Link>
                     </div>
                     <br/><br/>
                     <Suspense fallback={<div>Loading...</div>}>
@@ -89,6 +94,15 @@ class App extends React.Component {
                             </Route>
                             <Route path="/memoization">
                                 <Memoization />
+                            </Route>
+                            <Route path="/person-details">
+                                <PersonDetails />
+                            </Route>
+                            <Route path="/employee-list">
+                                <EmployeeList />
+                            </Route>
+                            <Route path="/employee-details/:id">
+                                <EmployeeDetails />
                             </Route>
                         </Switch>
                     </Suspense>

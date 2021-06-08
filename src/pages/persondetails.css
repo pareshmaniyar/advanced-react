@@ -1,0 +1,25 @@
+.personal-details {
+    display: flex;
+}
+.left-portion {
+    margin-right: 10px;
+    padding-right: 200px;
+    border-right: 1px solid blue;
+}
+.right-portion {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.row-element {
+    margin-right: 10px;
+}
+.table-row {
+    display: flex;
+    border: 1px solid blue;
+    cursor: pointer;
+}
+.table-row.selected{
+    background-color: blue;
+    color: white;
+}
